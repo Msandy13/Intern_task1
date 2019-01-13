@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQE-Li-2fe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Crypto String-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Intern_Task_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjV-kq-M1h">
+                                <rect key="frame" x="20" y="287" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.19218292316183447" green="0.85511183375634525" blue="0.21518862421224666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hwH-JT-uaA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="ENCRYPT">
+                                    <color key="titleColor" red="0.99991267919540405" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="encryptDecryptBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZA-6S-Cxi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNG-3F-rlL">
+                                <rect key="frame" x="20" y="352" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.54130314086294418" green="0.14127827518096589" blue="0.11592326390785543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZHb-9P-SnW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="DECRYPT">
+                                    <color key="titleColor" red="0.98795075838250546" green="1" blue="0.95671301730715441" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="encryptDecryptBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKc-It-QZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zjV-kq-M1h" secondAttribute="bottom" constant="340" id="65U-Rz-zaz"/>
+                            <constraint firstItem="MNG-3F-rlL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6ea-Ys-Fp2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MNG-3F-rlL" secondAttribute="trailing" constant="20" id="GGG-AI-UkS"/>
+                            <constraint firstItem="zjV-kq-M1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MQz-T9-ro8"/>
+                            <constraint firstItem="MNG-3F-rlL" firstAttribute="top" secondItem="zjV-kq-M1h" secondAttribute="bottom" constant="25" id="Oxv-gf-9su"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjV-kq-M1h" secondAttribute="trailing" constant="20" id="PYP-0K-hRR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crypto String" id="ewR-Oa-Z58"/>
+                    <connections>
+                        <segue destination="mVf-zF-jEO" kind="show" identifier="moveToEncryption" id="5N8-eF-BNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775.20000000000005" y="133.5832083958021"/>
+        </scene>
+        <!--Encrypt Decrypt Controller-->
+        <scene sceneID="mZh-1Y-WIE">
+            <objects>
+                <viewController id="mVf-zF-jEO" customClass="EncryptDecryptController" customModule="Intern_Task_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udC-oz-yZP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-gy-VCN">
+                                <rect key="frame" x="20" y="277" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XWM-Ng-Rhx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" destination="mVf-zF-jEO" eventType="editingChanged" id="j9C-Lh-xTq"/>
+                                    <outlet property="delegate" destination="mVf-zF-jEO" id="mif-0b-Z54"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOr-Rj-6G4">
+                                <rect key="frame" x="20" y="342" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.14635294171218105" green="0.5990321302525492" blue="0.90432661802030456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ENh-ZH-ZN2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.8204377182651208" green="0.84437314803017827" blue="0.86048540609137059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitBtnAction:" destination="mVf-zF-jEO" eventType="touchUpInside" id="is5-AO-iqp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-xS-KGP">
+                                <rect key="frame" x="40" y="412" width="295" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="c7f-8Q-OlG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.82233502538071068" green="0.25568149461543305" blue="0.17997557402972042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M2q-uU-Op5" firstAttribute="trailing" secondItem="tOr-Rj-6G4" secondAttribute="trailing" constant="20" id="7NP-tu-ugY"/>
+                            <constraint firstItem="cL0-gy-VCN" firstAttribute="leading" secondItem="M2q-uU-Op5" secondAttribute="leading" constant="20" id="WSz-hZ-1zT"/>
+                            <constraint firstItem="zsk-xS-KGP" firstAttribute="leading" secondItem="M2q-uU-Op5" secondAttribute="leading" constant="40" id="Z00-u4-WUz"/>
+                            <constraint firstItem="tOr-Rj-6G4" firstAttribute="leading" secondItem="M2q-uU-Op5" secondAttribute="leading" constant="20" id="eb4-A6-BWd"/>
+                            <constraint firstItem="M2q-uU-Op5" firstAttribute="trailing" secondItem="cL0-gy-VCN" secondAttribute="trailing" constant="20" id="gdJ-4u-OAh"/>
+                            <constraint firstItem="zsk-xS-KGP" firstAttribute="top" secondItem="tOr-Rj-6G4" secondAttribute="bottom" constant="30" id="mxC-PV-k9S"/>
+                            <constraint firstItem="tOr-Rj-6G4" firstAttribute="top" secondItem="cL0-gy-VCN" secondAttribute="bottom" constant="25" id="oQd-Ke-duh"/>
+                            <constraint firstItem="M2q-uU-Op5" firstAttribute="trailing" secondItem="zsk-xS-KGP" secondAttribute="trailing" constant="40" id="vRC-ek-tp6"/>
+                            <constraint firstItem="M2q-uU-Op5" firstAttribute="bottom" secondItem="cL0-gy-VCN" secondAttribute="bottom" constant="350" id="zH0-R2-gta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M2q-uU-Op5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JEE-qe-XOp"/>
+                    <connections>
+                        <outlet property="cryptStringTextField" destination="cL0-gy-VCN" id="J7G-rL-ZAY"/>
+                        <outlet property="encryptedLabel" destination="zsk-xS-KGP" id="ygS-BM-cPA"/>
+                        <outlet property="submitBtn" destination="tOr-Rj-6G4" id="x6T-2p-tEi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKC-wW-GjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QFV-bG-ZTp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wQE-Li-2fe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UWp-4x-LIx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f6u-pl-Tt7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcd-bY-Vwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="134"/>
+        </scene>
+    </scenes>
+</document>
